@@ -1,0 +1,22 @@
+:host {
+  display: block;
+  width: 400px;
+  margin: 150px auto 0;
+  text-align: center;
+  box-shadow: 0 0 15px 5px rgb(206 206 206 / 70%);
+  border-radius: 4px;
+  padding: 20px 0;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.info {
+  display: block;
+}
+
+.go-to-button {
+  margin-top: 10px;
+}

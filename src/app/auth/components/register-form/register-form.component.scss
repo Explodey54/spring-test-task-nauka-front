@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+.control {
+  &--input {
+    display: block;
+    width: 200px;
+    margin: 0 auto 5px;
+  }
+
+  &--submit {
+    margin-top: 12px;
+  }
+}

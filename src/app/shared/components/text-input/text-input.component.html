@@ -1,0 +1,5 @@
+<label class="label">
+  <span *ngIf="title" class="title">{{ title }}</span>
+  <input [type]="type" class="input" [formControl]="value">
+  <span *ngIf="error" class="error">{{ error }}</span>
+</label>

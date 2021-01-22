@@ -1,0 +1,15 @@
+<h1>Register</h1>
+
+<div *ngIf="!(isRegisterSuccess$ | async)">
+  <nauka-register-form
+    (formSubmit)="onFormSubmit($event)"
+    [error]="error$ | async"
+  ></nauka-register-form>
+  <a class="link" [routerLink]="['/', 'auth']">To Login</a>
+</div>
+
+<div data-testid="success-block" *ngIf="isRegisterSuccess$ | async">
+  <span *ngFor="let line of (info$ | async)" class="info">{{ line }}</span>
+  <nauka-button class="go-to-button" data-testid="go-to-login" (click)="goToLogin()">Go to login page</nauka-button>
+</div>
+

@@ -1,0 +1,21 @@
+<nauka-time-report-department-list
+  class="department-list"
+  [departments]="departments$ | async"
+  [selected]="selectedDepartment$ | async"
+  (departmentSelect)="onDepartmentSelect($event)"
+></nauka-time-report-department-list>
+<div class="table-wrapper">
+  <nauka-time-report-month-list
+    class="month-list"
+    [selected]="selectedMonth$ | async"
+    (monthSelect)="onMonthSelect($event)"
+  ></nauka-time-report-month-list>
+  <nauka-time-report-table
+    class="report-table"
+    [workerList]="workers$ | async"
+    [month]="selectedMonth$ | async"
+    [calendarDays]="calendarDays$ | async"
+    [defaultCalendarDayStatus]="defaultCalendarDayStatus$ | async"
+  ></nauka-time-report-table>
+</div>
+

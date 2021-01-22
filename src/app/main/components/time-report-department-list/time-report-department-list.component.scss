@@ -1,0 +1,10 @@
+.department {
+  padding: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  background-color: #ffffd2;
+
+  &--selected {
+    background-color: #e8e78f;
+  }
+}

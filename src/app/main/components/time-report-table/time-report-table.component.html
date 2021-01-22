@@ -1,0 +1,24 @@
+<table class="table">
+  <tr>
+    <th>Full name</th>
+    <th
+      *ngFor="let status of monthlyStatuses; let i = index"
+      [style.background-color]="status?.hexColor"
+      data-testid="month-header"
+    >{{ i + 1 }}</th>
+    <th>Summary</th>
+  </tr>
+  <tr *ngFor="let worker of workerList; let i = index" data-testid="worker">
+    <td data-testid="worker-full-name">{{ worker.firstName }} {{ worker.lastName }}</td>
+    <td
+      *ngFor="let day of daysData[i]; let d = index"
+      [style.background-color]="monthlyStatuses[d]?.hexColor"
+      data-testid="month-column"
+    >
+      {{ day?.workdayResult?.status?.shortTitle }}
+    </td>
+    <td data-testid="summary-column">
+      {{ worker.workdayResults | transform:createSummary }}
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,11 @@
+.month {
+  background-color: #ffffd2;
+  border: 1px solid #b6b582;
+  border-radius: 4px 4px 0 0;
+  margin-right: 2px;
+  cursor: pointer;
+
+  &--selected {
+    background-color: #e8e78f;
+  }
+}

@@ -1,0 +1,19 @@
+<form class="form" [formGroup]="formGroup" (ngSubmit)="onFormSubmit()">
+  <nauka-text-input
+    class="control control--input"
+    title="Username"
+    formControlName="username"
+  ></nauka-text-input>
+  <nauka-text-input
+    class="control control--input"
+    title="Password"
+    type="password"
+    formControlName="password"
+  ></nauka-text-input>
+  <div class="error">{{ error }}</div>
+  <nauka-button
+    class="control control--submit"
+    type="submit"
+    data-testid="submit-btn"
+  >Login</nauka-button>
+</form>

@@ -1,0 +1,9 @@
+<div
+  *ngFor="let dep of departments"
+  (click)="onDepartmentClick(dep)"
+  class="department"
+  [class.department--selected]="selected === dep.id"
+  data-testid="department"
+>
+  {{ dep.title }}
+</div>

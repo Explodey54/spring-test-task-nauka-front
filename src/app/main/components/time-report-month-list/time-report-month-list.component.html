@@ -1,0 +1,9 @@
+<button
+  *ngFor="let i of months"
+  class="month"
+  [class.month--selected]="selected === i.value"
+  (click)="onMonthClick(i)"
+  data-testid="month"
+>
+  {{ i.title }}
+</button>

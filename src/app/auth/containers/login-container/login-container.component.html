@@ -1,0 +1,7 @@
+<h1>Login</h1>
+<nauka-login-form
+  class="login-form"
+  (formSubmit)="onFormSubmit($event)"
+  [error]="error$ | async"
+></nauka-login-form>
+<a class="link" [routerLink]="['register']">To Register</a>
